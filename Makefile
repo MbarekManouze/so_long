@@ -6,7 +6,7 @@
 #    By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 15:38:27 by mmanouze          #+#    #+#              #
-#    Updated: 2022/04/02 15:41:24 by mmanouze         ###   ########.fr        #
+#    Updated: 2022/04/05 15:29:39 by mmanouze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ MLX_FLAGS    = -lmlx -framework OpenGL -framework Appkit
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) -fsanitize=address $(MLX_FLAGS) $(OBJ) -o $(NAME)
 
 clean :
 	rm -f $(OBJ) $(OBJ_BONUS)

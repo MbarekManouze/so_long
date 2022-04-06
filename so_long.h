@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:23:53 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/02 15:22:31 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/05 12:15:20 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,13 @@ typedef struct var
     int     C;
     int     E;
     int     O_I;
+    void    *mlx;
+    void    *mlx_win;
+    void    *img_wall;
+    void    *img_player;
+    void    *img_space;
+    void    *img_door;
+    void    *img_collec;
 }   t_var;
 
 char	*get_next_line(int fd);

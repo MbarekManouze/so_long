@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 15:06:51 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/02 15:31:48 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/05 15:36:35 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ void    read_map(t_var *var, char *str)
     if (fd < 0)
         ft_error();
     map = get_next_line(fd);
+    if (!map)
+        ft_error();
     var->length = ft_strlen(map) - 1;
-    take = ft_strjoin(take, map);
+    // take = ft_strjoin(take, map);
     while (map)
     {
         var->height++;
@@ -39,7 +41,14 @@ void    read_map(t_var *var, char *str)
         take = ft_strjoin(take, map);
         map = get_next_line(fd);
     }
-     var->two = ft_split(take, '\n');
+    var->two = ft_split(take, '\n');
+    // printf("lllll");
+    // int i = 0;
+    // while (var->two[i])
+    // {
+    //     printf("%s\n", var->two[i]);
+    //     i++;
+    // }
 }
 
 void    up_down_walls(t_var *var)
@@ -51,7 +60,7 @@ void    up_down_walls(t_var *var)
     i = 0;
     while (var->two[0][i] == '1')
         i++;
-    while (var->two[var->height][a] == '1')
+    while (var->two[var->height - 1][a] == '1')
         a++;
     if (i != var->length || a != var->length)
         ft_error();
@@ -63,14 +72,14 @@ void    side_walls(t_var *var)
     int k;
 
     k = 0;
-    i = var->height;
+    i = var->height - 1;
     while (i)
     {
         if (var->two[i][0] == '1' && var->two[i][var->length - 1] == '1')
             k++;
         i--;
     }
-    if (k != var->height)
+    if (k != var->height - 1)
         ft_error();
 }
 
