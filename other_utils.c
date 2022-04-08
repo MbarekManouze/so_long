@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 12:10:25 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/02 12:32:49 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:23:44 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,13 @@ int	ft_strcmp(const char	*s1, const char	*s2)
 
 	str = (unsigned char *)s1;
 	ssr = (unsigned char *)s2;
-
 	i = 0;
 	while ((str[i] && ssr[i]) && str[i] == ssr[i])
 		i++;
 	return (str[i] - ssr[i]);
 }
 
-char    *ft_strchr_p(char *buffer)
+char	*ft_strchr_p(char *buffer)
 {
 	size_t	i;
 
@@ -63,4 +62,10 @@ char    *ft_strchr_p(char *buffer)
 		i++;
 	}
 	return (NULL);
+}
+
+int	do_func(void)
+{
+	exit (0);
+	return (0);
 }
