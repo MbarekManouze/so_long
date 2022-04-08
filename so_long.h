@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:23:53 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/08 13:31:34 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/08 16:01:55 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <mlx.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <stdarg.h>
 
 typedef struct var
 {
@@ -68,5 +69,10 @@ void	set_down_map(t_var *var);
 void	extra(t_var *var, int i, int j);
 void	xpm_to_image(t_var *var);
 void	ft_error(void);
+void	ft_printf(const char *c, ...);
+void	ft_putnchar(char c);
+void	print_num(const char *c, va_list ap);
+void	ft_putnbr(long int n);
+void	check_after(const char *c, va_list ap);
 
 #endif

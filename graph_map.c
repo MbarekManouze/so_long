@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:59:36 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/08 13:51:33 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/08 16:01:22 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void	ft_write_to_window(t_var *var)
 {
 	char	*str;
 
+	ft_printf("move : %d\n", var->count);
 	str = ft_itoa(var->count);
 	mlx_string_put(var->mlx, var->win, 25, 25, 0xccccff, str);
 	free(str);

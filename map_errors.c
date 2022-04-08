@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 15:06:51 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/08 13:38:29 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/08 15:11:51 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ void	read_map(t_var *var, char *str)
 		if (ft_strcmp(map, "\n") == 0)
 			ft_error();
 		take = ft_strjoin(take, map);
+		free(map);
 		map = get_next_line(fd);
 	}
 	var->two = ft_split(take, '\n');
+	free(take);
 }
 
 void	up_down_walls(t_var *var)

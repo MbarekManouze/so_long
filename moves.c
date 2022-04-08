@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:54:52 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/08 13:39:32 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/08 15:57:42 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_move_right(t_var *var)
 	}
 	else if (var->two[var->x][var->y + 1] == 'E' && var->c == 0)
 	{
-		printf("YOU WON\n");
+		write(1, "YOU WON\n", 8);
 		exit (0);
 	}
 }
@@ -47,7 +47,7 @@ void	ft_move_left(t_var *var)
 	}
 	else if (var->two[var->x][var->y - 1] == 'E' && var->c == 0)
 	{
-		printf("YOU WON\n");
+		write(1, "YOU WON\n", 8);
 		exit (0);
 	}
 }
@@ -67,7 +67,7 @@ void	ft_move_up(t_var *var)
 	}
 	else if (var->two[var->x - 1][var->y] == 'E' && var->c == 0)
 	{
-		printf("YOU WON\n");
+		write(1, "YOU WON\n", 8);
 		exit (0);
 	}
 }
@@ -87,7 +87,7 @@ void	ft_move_down(t_var *var)
 	}
 	else if (var->two[var->x + 1][var->y] == 'E' && var->c == 0)
 	{
-		printf("YOU WON\n");
+		write(1, "YOU WON\n", 8);
 		exit (0);
 	}
 }

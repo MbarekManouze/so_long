@@ -6,7 +6,7 @@
 /*   By: mmanouze <mmanouze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 11:56:01 by mmanouze          #+#    #+#             */
-/*   Updated: 2022/04/08 13:32:01 by mmanouze         ###   ########.fr       */
+/*   Updated: 2022/04/08 17:13:27 by mmanouze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,5 @@ int	main(int ac, char **av)
 	if (ft_strcmp(str, ".ber") != 0)
 		ft_error();
 	check_map(*(av + 1));
+	system("leaks so_long");
 }
